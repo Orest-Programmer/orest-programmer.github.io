@@ -1,0 +1,743 @@
+@import './base/basereset';
+@import './fonts/fonts';
+@import './base/base-text';
+
+.contain{
+    width: 1440px;
+    margin: 0 auto;
+}
+.container{
+    width: 940px;
+    margin: 0 auto;
+}
+header{
+    background-image: url('../img/Background.png');
+    background-repeat: no-repeat;
+    background-position: cover;
+    padding-top: 40px;
+    padding-bottom: 224px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 148px;
+    &__logo{
+        font-size: 20px;
+        text-decoration: none;
+        font-family: $title-font;
+        color: $text-color-w;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    &__btns{
+        width: 180px;
+        display: flex;
+        margin-right: 40px;
+        font-size: 14px;
+        &__login{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90px;
+            height: 36px;
+            font-family: $title2-font;
+            color: $text-color-w;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+        &__signup{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90px;
+            height: 36px;
+            border: 2px solid $text-color-w;
+            border-radius: 40px;
+            font-family: $title2-font;
+            color: $text-color-w;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+    }
+}
+.pc_logo{
+    display: block;
+}
+.mobile_logo{
+    display: none;
+}
+main{
+    padding-bottom: 98px;
+}
+h1{
+    font-family: $title-font;
+    color: $text-color-w;
+    display: block;
+    width: 470px;
+    font-size: 52px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 64px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+}
+p{
+    font-family: $title4-font;
+    font-size: 24px;
+    text-align: center;
+    color: #F7F3F2;
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 225px;
+    height: 40px;
+    background-color: #FF4E50;
+    border-radius: 40px;
+    text-decoration: none;
+    font-family: $title-font;
+    color: $text-color-w;
+    font-size: 14px;
+    margin: 0 auto;
+}
+h2{
+    font-family: $title3-font;
+    color: #444;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+.steps{
+    display: flex;
+    justify-content: space-between;
+    &__item{
+        width: 300px;
+        height: 400px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: end;
+        flex-wrap: wrap;
+        flex-flow: column;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+    }
+    &__item:nth-child(1){
+        background-image: url('../img/Step\ 1.png');
+    }
+    &__item:nth-child(2){
+        background-image: url('../img/Step\ 2.png');
+    }
+    &__item:nth-child(3){
+        background-image: url('../img/Step\ 3.png');
+    }
+    &__btn{
+        @extend .btn;
+        width: 70px;
+        height: 20px;
+        text-transform: uppercase;
+        font-family: $title1-font;
+        color: $text-color-w;
+        font-weight: 100;
+        font-size: 10px;
+        margin-bottom: 27px;
+        margin-left: 25px;
+    }
+    &__title{
+        font-family: $title3-font;
+        color: $text-color-w;
+        font-size: 24px;
+        display: block;
+        width: 250px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        font-weight: bold;
+        line-height: 26px;
+    }
+    &__about{
+        font-family: $title4-font;
+        color: #E3E3E3;
+        font-size: 14px;
+        display: block;
+        width: 250px;
+        margin: 0 auto;
+        text-align: start;
+    }
+}
+.partner{
+    display: flex;
+    justify-content: space-between;
+    &__person{
+        width: 221px;
+        margin-bottom: 9px;
+    }
+    &__person img{
+        width: 126px;
+        height: 126px;
+        border-radius: 50%;
+    }
+    &__img{
+        position: relative;
+        width: 120px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    &__img::after{
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        border: 4px solid #fff;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        bottom: 0;
+        right: -5px;
+    }
+    .img_1::after{
+        background-color: #FF4E50;
+        background-image: url(../img/music.png);
+    }
+    .img_2::after{
+        background-color: #19D4CA;
+        background-image: url(../img/brush.png);      
+    }
+    .img_3::after{
+        background-color: #FFA710;
+        background-image: url(../img/camera.png);  
+    }
+    .img_4::after{
+        background-color: #667DF3;
+        background-image: url(../img/airplane.png); 
+    }
+    
+    h4{
+        font-family: $title3-font;
+        color: #444;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 22px;
+    }
+    p{
+        font-family: $title4-font;
+        color: #666;
+        font-size: 14px;
+        text-align: center;
+        width: 221px;
+    }
+}
+.see{
+    @extend .btn;
+    color: #FF4E50;
+    background-color: #fff;
+    border: 2px solid #FF4E50;
+    font-weight: bold;
+    width: 180px;
+    height: 40px;
+    box-sizing: border-box;
+}
+.ideas{
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    
+    &__item{
+        width: 300px;
+        height: 310px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $title3-font;
+        color: $text-color-w;
+        font-weight: bold;
+        font-size: 22px;
+        background-repeat: no-repeat;
+        border-radius: 4px;
+    }
+    p{
+        display: block;
+        width: 238px;
+        margin: 0;
+    }
+    &__sport{
+        background-image: url(../img/ideas1.png);
+    }
+    &__health{
+        background-image: url(../img/ideas2.png);
+    }
+    &__extreme{
+        background-image: url(../img/ideas3.png);
+        p{
+            width: 208px;
+        }
+    }
+    
+    &__games{
+        background-image: url(../img/ideas4.png);
+        width: 300px;
+        height: 310px;
+    }
+    &__culture{
+        background-image: url(../img/ideas5.png);
+        width: 624px;
+        height: 310px;
+        p{
+            width:261px ;
+        }
+    }
+    &__enjomet{
+        background-image: url(../img/ideas6.png);
+        width: 624px;
+        height: 310px;
+        p{
+            width:277px ;
+        }
+    }
+    &__trevelling{
+        background-image: url(../img/ideas7.png);
+        width: 300px;
+        height: 310px;
+    }
+}
+.interest_q{
+    display: block;
+    margin: 0 auto;
+    font-family: $title4-font;
+    color: #666;
+    font-size: 18px;
+    margin-top: 56px;
+    margin-bottom: 25px;
+}
+.search_func{
+    display: flex;
+    justify-content: center;
+    &__email{
+        width: 300px;
+        height: 40px;
+        box-sizing: border-box;
+        border: 1px solid #999;
+        border-radius: 2px;
+    }
+    &__search{
+        @extend .btn;
+        margin: 0;
+        margin-left: 10px;
+        width: 173px;
+        height: 40px;
+    }
+}
+footer{
+    height: 260px;
+    border-top: 2px solid #FF4E50;
+}
+.footer{
+    padding-top: 38px;
+    display: flex;
+    &__logo{
+        display: block;
+        font-family: $title2-font;
+        color: #FF4E50;
+        font-size: 16px;
+        width: 120px;
+        text-decoration: none;
+        margin-right: 122px;
+    }
+    &__company{
+        display: block;
+        margin-right: 122px;
+    }
+    h5{
+        font-family: $title3-font;
+        color: #444;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    &__nav{
+        display: block;
+        text-decoration: none;
+        font-family: $title4-font;
+        font-weight: 300;
+        color: #999;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    &__design{
+        width: 110px;
+        margin-left: 294px;
+        p{
+            font-family: $title3-font;
+            width: 110px;
+            display: block;
+            text-align: end;
+            margin-bottom: 7px;
+            color: #CCC;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        img{
+            width: 110px;
+        }
+    }
+}
+// MEDIA
+
+@media screen and (min-width:768px) and (max-width:1440px) {
+    .contain{
+        width: 768px;
+    }
+    .container{
+        width: 748px;
+    }
+    header{
+        background-position: center;
+        padding-top: 37px;
+    }
+    main{
+        padding-bottom: 100px;
+    }
+    .nav{
+        &__logo{
+            margin-left: 40px;
+        }
+        &__btns{
+            margin-right: 40px;
+        }
+    }
+    .pc_logo{
+        display: block;
+    }
+    .mobile_logo{
+        display: none;
+    }
+    h2{
+        font-size: 22px;
+        margin-top: 95px;
+        margin-bottom: 39px;
+    }
+    .steps{
+        &__item{
+            width: 236px;
+        }
+        &__title{
+            width: 196px;
+            line-height: 14px;
+        }
+        &__about{
+            width: 196px;
+        }
+    }
+    .partner{
+        flex-wrap: wrap;
+        justify-content: center;
+        &__person{
+            width: 250px;
+        }
+        &__person:nth-child(3){
+            margin-bottom: 5px;
+        }
+        &__person:nth-child(4){
+            margin-bottom: 5px;    
+        }
+    }
+    .ideas{
+        &__sport{
+            width: 236px;
+            background-image: url('../img/ideas1C.png');
+            p{
+                width: 206px;
+            }
+        }
+        &__health{
+            width: 236px;
+            background-image: url('../img/ideas2C.png');
+            p{
+                width: 206px;
+            }
+        }
+        &__extreme{
+            width: 236px;
+            background-image: url('../img/ideas3C.png');
+            p{
+                width: 206px;
+            }
+        }
+        &__games{
+            width: 236px;
+            background-image: url('../img/ideas4C.png');
+            p{
+                width: 206px;
+            }
+        }
+        &__culture{
+            width: 492px;
+            background-image: url('../img/ideas5C.png');
+        }
+        &__enjomet{
+            width: 492px;
+            background-image: url('../img/ideas6C.png');
+        }
+        &__trevelling{
+            width: 236px;
+            background-image: url('../img/ideas7C.png');
+            p{
+                width: 206px;
+            }
+        }
+    }
+    .interest_q{
+        margin-bottom: 23px;
+    }
+    .footer{
+        &__logo{
+            margin-right: 107px;
+            margin-left: 29px;
+        }
+        &__company{
+            margin-right: 54px;
+        }
+        &__design{
+            margin-left: 126px;
+        }
+    }
+}
+@media screen and (min-width:320px) and (max-width:768px) {
+    .contain{
+        width: 320px;
+    }
+    .container{
+        width: 300px;
+    }
+    header{
+        background-image: url('../img/BackgroundM.png');
+        background-position: cover;
+        padding-bottom: 153px;
+        padding-top: 20px;
+        p{
+            font-size: 18px;
+            width: 280px;
+            line-height: 24px;
+            margin-bottom: 16px;
+        }
+    }
+    main{
+        padding-bottom: 40px;
+    }
+    .pc_logo{
+        display: none;
+    }
+    .mobile_logo{
+        display: block;
+        width: 152px;
+        margin: 0 auto;
+        margin-bottom: 28px;
+    }
+    .nav{
+        justify-content: center;
+        margin-bottom: 97px;
+        &__btns{
+            margin: 0;
+        }
+    }
+    h1{
+        font-size: 30px;
+        width: 277px;
+        line-height: 37px;
+        margin-bottom: 7px;
+    }
+    .btn{
+        width: 280px;
+    }
+    h2{
+        margin-top: 35px;
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+    .width_fix{
+        width: 280px;
+        line-height: 26px;
+    }
+    .steps{
+        display: block;
+        &__item{
+            width: 300px;
+            height: 240px;
+            margin-bottom: 10px;
+        }
+        &__title{
+            width: 250px;
+            line-height: 14px;
+        }
+        &__about{
+            width: 250px;
+        }
+        &__btn{
+            width: 70px;
+            height: 20px;
+        }
+        &__item:nth-child(1){
+            background-image: url('../img/Step\ 1M.png');
+        }
+        &__item:nth-child(2){
+            background-image: url('../img/Step\ 2M.png');
+        }
+        &__item:nth-child(3){
+            background-image: url('../img/Step\ 3M.png');
+        }
+    }
+    .partner{
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        &__person{
+            width: 250px;
+            margin-bottom: 15px;
+        }
+        &__img{
+            margin-bottom: 17px;
+        }
+        p{
+            width: 250px;
+            margin-bottom: 0;
+        }
+    }
+    .see{
+        margin-top: 26px;
+    }
+    .ideas{
+        display: block;
+        margin-top: 35px;
+        &__items{
+            display: block;
+            margin-bottom: 0;
+        }
+        &__sport{
+            width: 300px;
+            height: 120px;
+            margin-bottom: 10px;
+            background-image: url('../img/ideas1M.png');
+            p{
+                width: 206px;
+            }
+        }
+        &__health{
+            width: 300px;
+            height: 120px;
+            margin-bottom: 10px;
+            background-image: url('../img/ideas2M.png');
+            p{
+                width: 206px;
+            }
+        }
+        &__extreme{
+            width: 300px;
+            height: 120px;
+            margin-bottom: 10px;
+            background-image: url('../img/ideas3M.png');
+            p{
+                width: 206px;
+            }
+        }
+        &__games{
+            width: 300px;
+            height: 120px;
+            margin-bottom: 10px;
+            background-image: url('../img/ideas4M.png');
+            p{
+                width: 206px;
+            }
+        }
+        &__culture{
+            width: 300px;
+            height: 120px;
+            margin-bottom: 10px;
+            background-image: url('../img/ideas5M.png');
+        }
+        &__enjomet{
+            width: 300px;
+            height: 120px;
+            margin-bottom: 10px;
+            background-image: url('../img/ideas6M.png');
+        }
+        &__trevelling{
+            width: 300px;
+            height: 120px;
+            margin-bottom: 10px;
+            background-image: url('../img/ideas7M.png');
+            p{
+                width: 206px;
+            }
+        }
+    }
+    .interest_q{
+        margin-top: 0;
+        margin-bottom: 20px;
+        width: 290px;
+    }
+    .search_func{
+        display: block;
+        &__email{
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            width: 280px;
+        }
+        &__search{
+            margin: 0 auto;
+        }
+    }
+    .footer{
+        display: block;
+        padding-top: 22px;
+        &__logo{
+            margin: 0 auto;
+            margin-bottom: 16px;
+        }
+        &__company{
+            display: flex;
+            margin: 0 auto;
+            margin-bottom: 5px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 220px;
+            h5{
+                width: 280px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+        &__nav{
+            margin-right: 10px;
+            display: block;
+        }
+        h5{
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        &__design{
+            width: 110px;
+            margin: 0 auto;
+            margin-top: 18px;
+            p{
+                text-align: center;
+            }
+        }
+    }
+}
